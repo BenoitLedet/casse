@@ -6,7 +6,8 @@
 #include <iostream>
 int main()
 {
-    std::string texte = "Toto, Tata";
+    std::string texte;
+    while(std::getline(std::cin, texte)){
     // change les minuscules par des majuscules et réciproquement
     for (char & c : texte)
     {
@@ -16,6 +17,7 @@ int main()
             std::cout << char(std::tolower(c));
         else 
             std::cout << c;
+    }
     }
     return 0;
 }
